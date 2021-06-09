@@ -1,0 +1,1 @@
+This directory contains ptactice commands on **shell basics**
