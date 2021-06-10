@@ -1,0 +1,1 @@
+This directory contains practice commands on **shell permissions**
