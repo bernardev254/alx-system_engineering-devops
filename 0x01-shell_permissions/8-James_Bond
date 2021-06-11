@@ -1,2 +1,3 @@
 #!/bin/bash
-chmod oo7 hello
+chmod -r oo7 hello
+
