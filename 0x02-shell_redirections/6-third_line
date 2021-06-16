@@ -1,2 +1,2 @@
 #!/bin/bash
-head -3 iacte |tail +3
+tail +3 iacte |head -1
