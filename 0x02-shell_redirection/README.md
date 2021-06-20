@@ -1,1 +1,0 @@
-this is a directory containing practice code for shell redirection and filters
