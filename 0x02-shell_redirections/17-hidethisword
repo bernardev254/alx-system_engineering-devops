@@ -1,2 +1,2 @@
 #!/bin/bash
-cat !grep "bin" /etc/passwd
+cat ! grep "bin" /etc/passwd
