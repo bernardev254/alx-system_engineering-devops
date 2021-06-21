@@ -1,2 +1,2 @@
 #!/bin/bash
-printf %.2f "$((10**3*$NUM))e-3"
+printf %.2f\n "$((10**3*$NUM))e-3"
