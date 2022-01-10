@@ -1,0 +1,53 @@
+s is the ssh client system-wide configuration file.  See                                                                                                                                        
+  3 # ssh_config(5) for more information.  This file provides defaults for                                                                                                                               
+  4 # users, and the values can be changed in per-user configuration files                                                                                                                               
+  5 # or on the command line.                                                                                                                                                                            
+  6                                                                                                                                                                                                      
+  7 # Configuration data is parsed as follows:                                                                                                                                                           
+  8 #  1. command line options                                                                                                                                                                           
+  9 #  2. user-specific file                                                                                                                                                                             
+ 10 #  3. system-wide file                                                                                                                                                                               
+ 11 # Any configuration value is only changed the first time it is set.                                                                                                                                  
+ 12 # Thus, host-specific definitions should be at the beginning of the                                                                                                                                  
+ 13 # configuration file, and defaults at the end.                                                                                                                                                       
+ 14                                                                                                                                                                                                      
+ 15 # Site-wide defaults for some commonly used options.  For a comprehensive                                                                                                                            
+ 16 # list of available options, their meanings and defaults, please see the                                                                                                                             
+ 17 # ssh_config(5) man page.                                                                                                                                                                            
+ 18                                                                                                                                                                                                      
+ 19 Include /etc/ssh/ssh_config.d/*.conf                                                                                                                                                                 
+ 20                                                                                                                                                                                                      
+ 21 Host *                                                                                                                                                                                               
+ 22 #   ForwardAgent no                                                                                                                                                                                  
+ 23 #   ForwardX11 no                                                                                                                                                                                    
+ 24 #   ForwardX11Trusted yes                                                                                                                                                                            
+ 25 #   PasswordAuthentication yes                                                                                                                                                                       
+ 26 #   HostbasedAuthentication no                                                                                                                                                                       
+ 27 #   GSSAPIAuthentication no                                                                                                                                                                          
+ 28 #   GSSAPIDelegateCredentials no                                                                                                                                                                     
+ 29 #   GSSAPIKeyExchange no                                                                                                                                                                             
+ 30 #   GSSAPITrustDNS no                                                                                                                                                                                
+ 31 #   BatchMode no                                                                                                                                                                                     
+ 32 #   CheckHostIP yes                                                                                                                                                                                  
+ 33 #   AddressFamily any                                                                                                                                                                                
+ 34 #   ConnectTimeout 0                                                                                                                                                                                 
+ 35 #   StrictHostKeyChecking ask                                                                                                                                                                        
+ 36 #   IdentityFile ~/.ssh/id_rsa                                                                                                                                                                       
+ 37 #   IdentityFile ~/.ssh/id_dsa                                                                                                                                                                       
+ 38 #   IdentityFile ~/.ssh/id_ecdsa                                                                                                                                                                     
+ 39 #   IdentityFile ~/.ssh/id_ed25519                                                                                                                                                                   
+ 40 #   Port 22                                                                                                                                                                                          
+ 41 #   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc                                                                                                                                     
+ 42 #   MACs hmac-md5,hmac-sha1,umac-64@openssh.com                                                                                                                                                      
+ 43 #   EscapeChar ~                                                                                                                                                                                     
+ 44 #   Tunnel no                                                                                                                                                                                        
+ 45 #   TunnelDevice any:any                                                                                                                                                                             
+ 46 #   PermitLocalCommand no                                                                                                                                                                            
+ 47 #   VisualHostKey no                                                                                                                                                                                 
+ 48 #   ProxyCommand ssh -q -W %h:%p gateway.example.com                                                                                                                                                 
+ 49 #   RekeyLimit 1G 1h                                                                                                                                                                                 
+ 50     SendEnv LANG LC_*                                                                                                                                                                                
+ 51     HashKnownHosts yes                                                                                                                                                                               
+ 52     GSSAPIAuthentication yes                                                                                                                                                                         
+ 53     IdentityFile ~/.ssh/school                                                                                                                                                                       
+ 54     PasswordAuthentication no    
