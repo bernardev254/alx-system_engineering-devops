@@ -7,7 +7,7 @@ sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo echo "Hello World!" > /var/www/html/index.html
 sudo sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites_available/default
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/my_404.html
 sudo sed -i '/server_name -;/a error_page 404 /my_404.html; location = /my_404.html {root /usr/share/nginx/html; internal; }' /etc/nginx/sites-available/default
 sudo service nginx start
 
