@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#install and configure haproxy on lb-01 server
+
+sudo apt-get -y update
+sudo apt-get -y install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.0
+sudo apt-get install haproxy=2.0.\*
+sudo sed -i '/errorfile 504/a listen bkaraba/a	bind *:80/a\n	mode http/a\n	balance roundrobin' /etc/haproxy/haproxy.cfg
+sudo sed -i '/balance roundrobin/a	server 547-web-01 35.227.37.112:80 check/a	server 547-web-02 3.238.225.114:80 check' /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
+
