@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #configurations to run Nginx as nginx
-pkill apache2
+service nginx start
 chown -R nginx /etc/nginx
 chmod 777 /etc/nginx/nginx.conf
 sed -i 's/80/8080/g' /etc/nginx/sites-available/default
