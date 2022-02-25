@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""returns information about employee's TODO list progress."""
+"""Module that returns information about employee's TODO list progress."""
 
 import requests
 import sys
 
 if name == "__main__":
+
     emp_id = sys.argv[1]
     user = requests.get("https://jsonplaceholder.typicode.com/users?id={}"
                         .format(emp_id))
