@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module that returns information about employee's TODO list progress."""
+"""Module that returns information about employee's TODO list progress.
+"""
 
 import requests
 import sys
