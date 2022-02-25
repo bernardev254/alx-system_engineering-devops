@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """export data in the json format.
 """
-import requests
 import json
+import requests
 if __name__ == "__main__":
     users = requests.get("https://jsonplaceholder.typicode.com/users")
     my_file = 'todo_all_employees.json'
