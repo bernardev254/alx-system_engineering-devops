@@ -21,6 +21,6 @@ if __name__ == "__main__":
         if task.get('completed'):
             completed += 1
 
-    print("Employee {} is done with task ({}/{})"
+    print("Employee {} is done with task ({}/{}):"
           .format(name, completed, tasks))
     print('\n'.join(["\t" + task.get('title') for task in todos.json()]))
