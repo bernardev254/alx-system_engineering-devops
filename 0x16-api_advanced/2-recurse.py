@@ -21,6 +21,6 @@ def recurse(subreddit, hot_list=[], count=0, after=None):
         hot_list.append(tittle)
     if not data_dict.json().get('data').get('after'):
         return hot_list
- 
+
     return recurse(subreddit, hot_list, data_dict.json().get('data')
-        .get('count'), data_dict.json().get('data').get('after'))
+                   .get('count'), data_dict.json().get('data').get('after'))

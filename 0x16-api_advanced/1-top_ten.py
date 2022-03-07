@@ -15,5 +15,4 @@ def top_ten(subreddit):
     else:
         posts = data_dict.json().get('data').get('children')
         for post in posts:
-            print(post.get('data').get('title').encode('ascii', 'ignore')
-                  .decode('ascii'))
+            print(post.get('data').get('title'))
